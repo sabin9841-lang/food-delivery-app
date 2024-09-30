@@ -1,0 +1,30 @@
+let order = [];
+let total = 0;
+
+function addToOrder(item, price) {
+    order.push(item);
+    total += price;
+    updateOrderList();
+}
+
+function updateOrderList() {
+    const orderList = document.getElementById('orderList');
+    orderList.innerHTML = '';
+    order.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        orderList.appendChild(li);
+    });
+    document.getElementById('totalCost').textContent = `Total Cost: $${total.toFixed(2)}`;
+}
+
+function placeOrder() {
+    if (order.length > 0) {
+        alert(`Thank you for your order!\nTotal Cost: $${total.toFixed(2)}`);
+        order = [];
+        total = 0;
+        updateOrderList();
+    } else {
+        alert('You have not ordered anything.');
+    }
+}

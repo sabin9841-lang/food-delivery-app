@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Food Delivery App!</h1>
+        <h2>Menu</h2>
+        <ul id="menu">
+            <li>
+                Pizza - $10.99
+                <button onclick="addToOrder('Pizza', 10.99)">Add</button>
+            </li>
+            <li>
+                Burger - $8.99
+                <button onclick="addToOrder('Burger', 8.99)">Add</button>
+            </li>
+            <li>
+                Pasta - $12.99
+                <button onclick="addToOrder('Pasta', 12.99)">Add</button>
+            </li>
+            <li>
+                Salad - $7.49
+                <button onclick="addToOrder('Salad', 7.49)">Add</button>
+            </li>
+            <li>
+                Soda - $1.99
+                <button onclick="addToOrder('Soda', 1.99)">Add</button>
+            </li>
+        </ul>
+        <h2>Your Order</h2>
+        <ul id="orderList"></ul>
+        <p id="totalCost">Total Cost: $0.00</p>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
